@@ -4,139 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المنظومة الشمسية</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to right, #1e3a8a, #1e40af);
+            color: #ffffff;
+        }
+
+        .btn {
+            background-color: #fbbf24; 
+            color: white; 
+            padding: 11px 23px; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            border-radius: 30px; 
+            border: 2px solid transparent; 
+            transition: all 0.3s ease; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Effets au survol */
+        .btn:hover {
+            background-color: #f59e0b; 
+            border-color: #fbbf24; 
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); 
+            transform: scale(1.05); 
+        }
+
+        .card {
+            height: 540px; 
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem; 
+            margin-bottom: 1rem; 
+        }
+
+        .card-content p {
+            font-size: 1.1rem; 
+            margin-bottom: 2rem; 
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="acceuil.html">الصفحة الرئيسية</a></li>
-                <li><a href="planetes.html">الكواكب</a></li>
-                <li><a href="gallery.html">الصور</a></li>
-                <li><a href="contact.html">تواصل معنا</a></li>
+<body class="bg-gradient-to-b from-gray-900 to-gray-700">
+
+    <header class="bg-gray-800 p-4">
+        <nav class="max-w-7xl mx-auto">
+            <ul class="flex justify-between items-center space-x-6">
+                <li><a href="acceuil.html" class="text-white hover:text-gray-400 transition">الصفحة الرئيسية</a></li>
+                <li><a href="planetes.html" class="text-white hover:text-gray-400 transition">الكواكب</a></li>
+                <li><a href="gallery.html" class="text-white hover:text-gray-400 transition">الصور</a></li>
+                <li><a href="contact.html" class="text-white hover:text-gray-400 transition">تواصل معنا</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="intro">
-        <h1>اكتشف المنظومة الشمسية</h1> <br><br>
-        <p>مرحبا بك في موقع المنظومة الشمسية. هنا يمكنك التعرف على الشمس، الكواكب، والمزيد من الأجرام السماوية.</p> <br> <br>
-        <iframe width="80%" height="400" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+    <section class="intro text-center py-20">
+        <h1 class="text-4xl font-bold text-yellow-400">اكتشف المنظومة الشمسية</h1>
+        <p class="mt-6 text-xl">مرحبا بك في موقع المنظومة الشمسية. هنا يمكنك التعرف على الشمس، الكواكب، والمزيد من الأجرام السماوية.</p>
+        <iframe class="mt-8 mx-auto border-none rounded-lg" width="80%" height="400" src="video.mp4" allowfullscreen></iframe>
     </section>
 
-    <section class="cards" id="sun">
-        <div class="card">
-            <img src="sun.jfif" alt="">
-            <div class="card-content">
-                <h3>الشمس</h3>
-                <p>الشمس هي النجم المركزي في المنظومة الشمسية، وهي مصدر الطاقة الرئيسي للكواكب.</p>
+    <section class="cards container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+
+        
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="sun.jfif" alt="الشمس" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">الشمس</h3>
+                <p class="mt-2">الشمس هي النجم المركزي في المنظومة الشمسية، وهي مصدر الطاقة الرئيسي للكواكب.</p>
                 <a href="sun.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="mercury.jfif" alt="">
-            <div class="card-content">
-                <h3>عطارد</h3>
-                <p>عطارد هو أقرب كوكب للشمس، وهو أصغر الكواكب في المنظومة الشمسية.</p>
+      
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="mercury.jfif" alt="عطارد" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">عطارد</h3>
+                <p class="mt-2">عطارد هو أقرب كوكب للشمس، وهو أصغر الكواكب في المنظومة الشمسية.</p>
                 <a href="mercury.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
-    </section>
 
-    <section class="cards" id="venus">
-        <div class="card">
-            <img src="venus.jfif" alt="">
-            <div class="card-content">
-                <h3>زهرة</h3>
-                <p>زهرة هو الكوكب الثاني من الشمس، ويُعرف بكوكب الحب والجمال.</p>
+        
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="venus.jfif" alt="زهرة" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">زهرة</h3>
+                <p class="mt-2">زهرة هو الكوكب الثاني من الشمس، ويُعرف بكوكب الحب والجمال.</p>
                 <a href="venus.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="earth.jfif" alt="">
-            <div class="card-content">
-                <h3>الأرض</h3>
-                <p>الأرض هي الكوكب الذي نعيش عليه، وهي ثالث كوكب من الشمس.</p>
+       
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="earth.jfif" alt="الأرض" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">الأرض</h3>
+                <p class="mt-2">الأرض هي الكوكب الذي نعيش عليه، وهي ثالث كوكب من الشمس.</p>
                 <a href="earth.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
-    </section>
 
-    <section class="cards" id="mars">
-        <div class="card">
-            <img src="mars.jfif" alt="">
-            <div class="card-content">
-                <h3>المريخ</h3>
-                <p>المريخ هو الكوكب الرابع من الشمس، ويُعرف بالكوكب الأحمر.</p>
+       
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="mars.jfif" alt="المريخ" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">المريخ</h3>
+                <p class="mt-2">المريخ هو الكوكب الرابع من الشمس، ويُعرف بالكوكب الأحمر.</p>
                 <a href="mars.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="jupiter.jfif" alt="">
-            <div class="card-content">
-                <h3>المشتري</h3>
-                <p>المشتري هو أكبر كوكب في المنظومة الشمسية، ويحتوي على العديد من الأقمار.</p>
+        
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <img src="jupiter.jfif" alt="المشتري" class="w-full h-64 object-cover rounded-md mb-4">
+            <div class="card-content text-center">
+                <h3 class="text-xl font-bold text-yellow-400">المشتري</h3>
+                <p class="mt-2">المشتري هو أكبر كوكب في المنظومة الشمسية، ويحتوي على العديد من الأقمار.</p>
                 <a href="jupiter.html" class="btn">تعرف على المزيد</a>
             </div>
         </div>
+
     </section>
 
-    <section class="cards" id="saturn">
-        <div class="card">
-            <img src="saturn.jfif" alt="">
-            <div class="card-content">
-                <h3>زحل</h3>
-                <p>زحل هو الكوكب السادس من الشمس، ويشتهر بحلقاته الجميلة.</p>
-                <a href="saturn.html" class="btn">تعرف على المزيد</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="uranus.jfif" alt="">
-            <div class="card-content">
-                <h3>أورانوس</h3>
-                <p>أورانوس هو الكوكب السابع من الشمس، ويتميز بلونه الأزرق المائل إلى الأخضر.</p>
-                <a href="uranus.html" class="btn">تعرف على المزيد</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="cards" id="neptune">
-        <div class="card">
-            <img src="neptune.jfif" alt="">
-            <div class="card-content">
-                <h3>نبتون</h3>
-                <p>نبتون هو الكوكب الثامن والأبعد عن الشمس، ويُعرف بالرياح القوية التي فيه.</p>
-                <a href="neptune.html" class="btn">تعرف على المزيد</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="pluto.jfif" alt="">
-            <div class="card-content">
-                <h3>بلوتو</h3>
-                <p>بلوتو هو كوكب قزم وقد كان يُعتبر في السابق الكوكب التاسع في المنظومة الشمسية.</p>
-                <a href="pluto.html" class="btn">تعرف على المزيد</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="cards" id="europa">
-        <div class="card">
-            <img src="titan.jfif" alt="">
-            <div class="card-content">
-                <h3>تيتان</h3>
-                <p>تيتان هو أكبر قمر تابع لزحل، ويحتوي على غلاف جوي كثيف.</p>
-                <a href="titan.html" class="btn">تعرف على المزيد</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 جميع الحقوق محفوظة.</p>
+    <footer class="py-6 bg-gray-800 text-center">
+        <p class="text-gray-400">© 2024 جميع الحقوق محفوظة.</p>
     </footer>
+
 </body>
 </html>
